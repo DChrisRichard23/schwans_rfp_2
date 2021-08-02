@@ -133,8 +133,15 @@ view: dcp_data_expanded {
   }
 
   dimension: goal_acv {
+    hidden: yes
     type: number
     sql: ${TABLE}.Goal_ACV ;;
+  }
+
+  measure: goal_acv_average {
+    type: average
+    sql: ${goal_acv} ;;
+    value_format: "###.0"
   }
 
   dimension: iri_customer_name {
@@ -163,8 +170,15 @@ view: dcp_data_expanded {
   }
 
   dimension: new_store_count {
+    hidden: yes
     type: number
     sql: ${TABLE}.New_Store_Count ;;
+  }
+
+  measure: new_store_count_average {
+    type: average
+    sql: ${new_store_count} ;;
+    value_format: "###.0"
   }
 
   dimension_group: on_shelf {
@@ -213,13 +227,26 @@ view: dcp_data_expanded {
   }
 
   dimension: share_of_mulo {
+    hidden: yes
     type: number
     sql: ${TABLE}.Share_of_MULO ;;
+  }
+
+  measure: share_of_mulo_average {
+    type: average
+    sql: ${share_of_mulo} ;;
+    value_format: "###.0"
   }
 
   dimension: ship_to_count {
     type: number
     sql: ${TABLE}.Ship_to_Count ;;
+  }
+
+  measure: ship_to_count_average {
+    type: average
+    sql: ${ship_to_count} ;;
+    value_format: "###.0"
   }
 
   dimension: sku {
