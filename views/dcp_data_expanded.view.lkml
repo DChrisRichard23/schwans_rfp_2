@@ -327,6 +327,12 @@ view: dcp_data_expanded {
     sql: ${iri_product_name}  ;;
   }
 
+  dimension: row_number {
+    type: number
+    primary_key: yes
+    sql: ${TABLE}.row_number ;;
+  }
+
   measure: count {
     type: count
     drill_fields: [iri_product_name, iri_customer_name, product_name, iri_name, product_short_name]

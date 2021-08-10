@@ -45,6 +45,12 @@ view: select_the_matching_iri_data_records {
     sql: ${iri_product_name}  ;;
   }
 
+  dimension: row_number {
+    type: number
+    primary_key: yes
+    sql: ${TABLE}.row_number ;;
+  }
+
   measure: count {
     type: count
     drill_fields: [iri_product_name, iri_customer_name]
