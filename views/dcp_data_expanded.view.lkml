@@ -9,6 +9,7 @@ view: dcp_data_expanded {
   }
 
   measure: acv_weighted_distribution_average {
+    label: "ACV Weighted Distribution Average"
     type: average
     sql: ${acv_weighted_distribution} ;;
     value_format: "#,###.00"
@@ -30,6 +31,7 @@ view: dcp_data_expanded {
   }
 
   dimension: buying_group_id {
+    label: "Buying Group ID"
     type: number
     sql: ${TABLE}.Buying_Group_ID ;;
   }
@@ -60,6 +62,7 @@ view: dcp_data_expanded {
   }
 
   measure: current_acv_average {
+    label: "Current SCV Average"
     type: average
     sql: ${current_acv} ;;
     value_format: "###.0"
@@ -107,11 +110,6 @@ view: dcp_data_expanded {
     sql: ${TABLE}.Delivery_Date ;;
   }
 
-  # dimension: delivery_date {
-  #   type: string
-  #   sql: ${TABLE}.Delivery_Date ;;
-  # }
-
   dimension: director {
     type: string
     sql: ${TABLE}.Director ;;
@@ -139,22 +137,26 @@ view: dcp_data_expanded {
   }
 
   measure: goal_acv_average {
+    label: "Goal SCV Average"
     type: average
     sql: ${goal_acv} ;;
     value_format: "###.0"
   }
 
   dimension: iri_customer_name {
+    label: "IRI Customer Name"
     type: string
     sql: ${TABLE}.IRI_Customer_Name ;;
   }
 
   dimension: iri_name {
+    label: "IRI Name"
     type: string
     sql: ${TABLE}.IRI_Name ;;
   }
 
   dimension: iri_product_name {
+    label: "IRI Product Name"
     type: string
     sql: ${TABLE}.IRI_Product_Name ;;
   }
@@ -202,6 +204,7 @@ view: dcp_data_expanded {
   }
 
   dimension: planning_customer_id {
+    label: "Planning Customer ID"
     type: number
     sql: ${TABLE}.Planning_Customer_ID ;;
   }
@@ -233,6 +236,7 @@ view: dcp_data_expanded {
   }
 
   measure: share_of_mulo_average {
+    label: "Share of MULO Average"
     type: average
     sql: ${share_of_mulo} ;;
     value_format: "###.0"
@@ -256,6 +260,7 @@ view: dcp_data_expanded {
   }
 
   dimension: sku {
+    label: "SKU"
     type: string
     sql: CAST(${sku_in} AS STRING) ;;
   }
@@ -271,11 +276,13 @@ view: dcp_data_expanded {
   }
 
   dimension: total_customer_bgp {
+    label: "Total Customer BGP"
     type: string
     sql: ${TABLE}.Total_Customer_BGP ;;
   }
 
   dimension: upc {
+    label: "UPC"
     type: number
     sql: ${TABLE}.UPC ;;
   }
@@ -286,11 +293,13 @@ view: dcp_data_expanded {
   }
 
   dimension: vp {
+    label: "VP"
     type: string
     sql: ${TABLE}.VP ;;
   }
 
   dimension: wf_status {
+    label: "WF Status"
     type: string
     sql: ${TABLE}.WF_Status ;;
   }
