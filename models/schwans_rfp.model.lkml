@@ -10,4 +10,12 @@ datagroup: schwans_rfp_default_datagroup {
 
 persist_with: schwans_rfp_default_datagroup
 
-explore: dcp_data_expanded {}
+explore: dcp_data_expanded {
+  label: "Schwan's RFP"
+  join: link_buttons {
+    type: left_outer
+    relationship: many_to_one
+    sql_on: 1=1 ;;
+  }
+
+}

@@ -249,9 +249,15 @@ view: dcp_data_expanded {
     value_format: "###.0"
   }
 
-  dimension: sku {
+  dimension: sku_in {
+    hidden: yes
     type: number
     sql: ${TABLE}.SKU ;;
+  }
+
+  dimension: sku {
+    type: string
+    sql: CAST(${sku_in} AS STRING) ;;
   }
 
   dimension: time {
