@@ -25,6 +25,11 @@ view: dcp_data_expanded {
     sql: ${TABLE}.Buying_Group ;;
   }
 
+  measure: buying_groups {
+    type: count_distinct
+    sql: ${buying_group} ;;
+  }
+
   dimension: buying_group_alias {
     type: string
     sql: ${TABLE}.Buying_Group_Alias ;;
@@ -62,7 +67,7 @@ view: dcp_data_expanded {
   }
 
   measure: current_acv_average {
-    label: "Current SCV Average"
+    label: "Current ACV Average"
     type: average
     sql: ${current_acv} ;;
     value_format: "###.0"
@@ -137,7 +142,7 @@ view: dcp_data_expanded {
   }
 
   measure: goal_acv_average {
-    label: "Goal SCV Average"
+    label: "Goal ACV Average"
     type: average
     sql: ${goal_acv} ;;
     value_format: "###.0"
@@ -242,6 +247,13 @@ view: dcp_data_expanded {
     value_format: "###.0"
   }
 
+  dimension: share_of_mulo_average_tier {
+    type: tier
+    tiers: [1.0, 1.3, 1.4, 1.6, 1.8, 2.0, 2.2, 2.4, 2.6, 2.8, 3.0, 3.2, 3.4, 3.6, 3.8, 4.0, 4.2, 4.4, 4.6, 4.8, 5.0]
+    sql: ${share_of_mulo} ;;
+  }
+
+
   dimension: ship_to_count {
     type: number
     sql: ${TABLE}.Ship_to_Count ;;
@@ -271,6 +283,11 @@ view: dcp_data_expanded {
   }
 
   dimension: total_customer {
+    type: string
+    sql: ${TABLE}.Total_Customer ;;
+  }
+
+  dimension: total_customer_2 {
     type: string
     sql: ${TABLE}.Total_Customer ;;
   }

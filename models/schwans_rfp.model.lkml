@@ -15,6 +15,16 @@ explore: select_the_matching_iri_data_records {
   view_label: "Matching IRI Data Records"
 }
 
+explore: store_counts_for_each_total_customer {
+  label: "Store Counts For Each Total Customer"
+  view_label: "Store Counts For Each Total Customer"
+}
+
+explore: dcp_calculations_on_store_counts {
+  label: "DCP Calculations on Store Counts"
+  view_label: "DCP Calculations on Store Counts"
+}
+
 explore: dcp_data_expanded {
   label: "Schwan's RFP"
   view_label: "Main Table"
