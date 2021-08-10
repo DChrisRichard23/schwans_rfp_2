@@ -34,41 +34,49 @@ view: link_buttons {
   dimension: link_2 {
     type: string
     sql: ${TABLE}.link_2 ;;
+    html: <a href="/dashboards-next/151">{{ value }}</a> ;;
   }
 
   dimension: link_3 {
     type: string
     sql: ${TABLE}.link_3 ;;
+    html: <a href="/dashboards-next/152">{{ value }}</a> ;;
   }
 
   dimension: link_4 {
     type: string
     sql: ${TABLE}.link_4 ;;
+    html: <a href="/dashboards-next/153">{{ value }}</a> ;;
   }
 
   dimension: link_5 {
     type: string
     sql: ${TABLE}.link_5 ;;
+    html: <a href="/dashboards-next/154">{{ value }}</a> ;;
   }
 
   dimension: link_6 {
     type: string
     sql: ${TABLE}.link_6 ;;
+    html: <a href="/dashboards-next/155">{{ value }}</a> ;;
   }
 
   dimension: link_7 {
     type: string
     sql: ${TABLE}.link_7 ;;
+    html: <a href="/dashboards-next/156">{{ value }}</a> ;;
   }
 
   dimension: link_8 {
     type: string
     sql: ${TABLE}.link_8 ;;
+    html: <a href="/dashboards-next/157">{{ value }}</a> ;;
   }
 
   dimension: link_9 {
     type: string
     sql: ${TABLE}.link_9 ;;
+    html: <a href="/dashboards-next/158">{{ value }}</a> ;;
   }
 
   set: detail {
