@@ -27,6 +27,24 @@ view: select_the_matching_iri_data_records {
     sql: ${TABLE}.IRI_Product_Name ;;
   }
 
+  measure: iri_records {
+    label: "IRI Records"
+    type: count_distinct
+    sql: ${iri_customer_name} || ${iri_product_name}   ;;
+  }
+
+  measure: iri_customers {
+    label: "IRI Customers"
+    type: count_distinct
+    sql: ${iri_customer_name}  ;;
+  }
+
+  measure: iri_product_names {
+    label: "IRI Product Names"
+    type: count_distinct
+    sql: ${iri_product_name}  ;;
+  }
+
   measure: count {
     type: count
     drill_fields: [iri_product_name, iri_customer_name]

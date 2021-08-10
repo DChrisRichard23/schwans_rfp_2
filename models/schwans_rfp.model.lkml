@@ -10,6 +10,11 @@ datagroup: schwans_rfp_default_datagroup {
 
 persist_with: schwans_rfp_default_datagroup
 
+explore: select_the_matching_iri_data_records {
+  label: "Matching IRI Data Records"
+  view_label: "Matching IRI Data Records"
+}
+
 explore: dcp_data_expanded {
   label: "Schwan's RFP"
   view_label: "Main Table"

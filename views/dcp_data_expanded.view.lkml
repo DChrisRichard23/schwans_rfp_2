@@ -275,6 +275,11 @@ view: dcp_data_expanded {
     sql: ${TABLE}.Total_Customer ;;
   }
 
+  measure: total_customers {
+    type: count_distinct
+    sql: ${total_customer} ;;
+  }
+
   dimension: total_customer_bgp {
     label: "Total Customer BGP"
     type: string
