@@ -304,6 +304,24 @@ view: dcp_data_expanded {
     sql: ${TABLE}.WF_Status ;;
   }
 
+  measure: iri_records {
+    label: "IRI Records"
+    type: count_distinct
+    sql: ${time}  || ${iri_customer_name} || ${iri_product_name}   ;;
+  }
+
+  measure: iri_customers {
+    label: "IRI Customers"
+    type: count_distinct
+    sql: ${iri_customer_name}  ;;
+  }
+
+  measure: iri_product_names {
+    label: "IRI Product Names"
+    type: count_distinct
+    sql: ${iri_product_name}  ;;
+  }
+
   measure: count {
     type: count
     drill_fields: [iri_product_name, iri_customer_name, product_name, iri_name, product_short_name]

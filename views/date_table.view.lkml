@@ -57,6 +57,21 @@ view: date_table {
     sql: ${TABLE}.days_ago ;;
   }
 
+  dimension: weeks_ago {
+    type: number
+    sql: ${TABLE}.weeks_ago ;;
+  }
+
+  dimension: months_ago {
+    type: number
+    sql: ${TABLE}.months_ago ;;
+  }
+
+  dimension: years_ago {
+    type: number
+    sql: ${TABLE}.years_ago ;;
+  }
+
   dimension: full_date_description {
     type: string
     sql: ${TABLE}.full_date_description ;;
@@ -102,9 +117,14 @@ view: date_table {
     sql: ${TABLE}.quarter_year_name ;;
   }
 
-  dimension: this_month_flag {
+  dimension: this_month_flag_in {
     type: number
     sql: ${TABLE}.this_month_flag ;;
+  }
+
+  dimension: this_month_flag {
+    type: string
+    sql: CASE WHEN ${this_month_flag_in} = 1 THEN 'Yes' ELSE 'No' END ;;
   }
 
   dimension: this_week_flag {

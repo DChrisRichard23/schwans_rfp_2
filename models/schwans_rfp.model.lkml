@@ -12,6 +12,7 @@ persist_with: schwans_rfp_default_datagroup
 
 explore: dcp_data_expanded {
   label: "Schwan's RFP"
+  view_label: "Main Table"
   join: link_buttons {
     type: left_outer
     relationship: many_to_one
@@ -52,5 +53,11 @@ explore: dcp_data_expanded {
     relationship: many_to_one
     sql_on: ${dcp_data_expanded.disco_date} = ${disco_date.date_date} ;;
   }
-
+  join: select_the_matching_iri_data_records {
+    view_label: "Matching IRI Data Records"
+    type: left_outer
+    relationship: many_to_one
+    sql_on: ${dcp_data_expanded.iri_customer_name} = ${select_the_matching_iri_data_records.iri_customer_name}
+          AND ${dcp_data_expanded.iri_product_name} = ${select_the_matching_iri_data_records.iri_product_name}  ;;
+  }
 }
