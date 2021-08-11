@@ -68,11 +68,17 @@ explore: dcp_data_expanded {
     relationship: many_to_one
     sql_on: ${dcp_data_expanded.disco_date} = ${disco_date.date_date} ;;
   }
-  # join: select_the_matching_iri_data_records {
-  #   view_label: "Matching IRI Data Records"
-  #   type: left_outer
-  #   relationship: many_to_one
-  #   sql_on: ${dcp_data_expanded.iri_customer_name} = ${select_the_matching_iri_data_records.iri_customer_name}
-  #         AND ${dcp_data_expanded.iri_product_name} = ${select_the_matching_iri_data_records.iri_product_name}  ;;
-  # }
+  join: select_the_matching_iri_data_records {
+    view_label: "Matching IRI Data Records"
+    type: left_outer
+    relationship: many_to_one
+    sql_on: ${dcp_data_expanded.iri_customer_name} = ${select_the_matching_iri_data_records.iri_customer_name}
+          AND ${dcp_data_expanded.iri_product_name} = ${select_the_matching_iri_data_records.iri_product_name}  ;;
+  }
+  join: dcp_calculations_on_store_counts {
+    view_label: "DCP Calculations on Store Counts"
+    type: left_outer
+    relationship: many_to_one
+    sql_on: ${dcp_data_expanded.total_customer} = ${dcp_calculations_on_store_counts.total_customer}  ;;
+  }
 }

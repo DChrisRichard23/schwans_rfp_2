@@ -9,6 +9,7 @@ view: dcp_calculations_on_store_counts {
   }
 
   measure: acv_weighted_distribution  {
+    label: "ACV Weighted Distribution"
     type: average
     sql: ${acv_weighted_distribution_in} ;;
   }
@@ -43,10 +44,12 @@ view: dcp_calculations_on_store_counts {
 
   measure: stores_calc  {
     type: average
+    value_format: "#,###"
     sql: ${stores_calc_in} ;;
   }
 
   dimension: total_customer {
+    primary_key: yes
     type: string
     sql: ${TABLE}.Total_Customer ;;
   }

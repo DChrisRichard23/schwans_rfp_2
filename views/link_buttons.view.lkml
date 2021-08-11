@@ -11,6 +11,7 @@ view: link_buttons {
        ,  '07. Select From the Pizza Goal Sheet...' AS link_7
        ,  '08. Get the Store Counts for each Total Customer...' AS link_8
        ,  '09. DCP Calculation on Store Counts...' AS link_9
+       ,  '10. Looker Demo...' AS link_10
        ;;
   }
 
@@ -77,6 +78,12 @@ view: link_buttons {
     type: string
     sql: ${TABLE}.link_9 ;;
     html: <a href="/dashboards-next/158">{{ value }}</a> ;;
+  }
+
+  dimension: link_10 {
+    type: string
+    sql: ${TABLE}.link_10 ;;
+    html: <a href="/dashboards-next/159">{{ value }}</a> ;;
   }
 
   set: detail {
