@@ -12,6 +12,7 @@ view: dcp_calculations_on_store_counts {
     label: "ACV Weighted Distribution"
     type: average
     sql: ${acv_weighted_distribution_in} ;;
+    value_format: "#,###"
   }
 
   dimension: current_store_count_in {
@@ -21,8 +22,9 @@ view: dcp_calculations_on_store_counts {
   }
 
   measure: current_store_count  {
-    type: average
+    type: sum
     sql: ${current_store_count_in} ;;
+    value_format: "#,###"
   }
 
   dimension: new_store_count_in {
@@ -32,7 +34,7 @@ view: dcp_calculations_on_store_counts {
   }
 
   measure: new_store_count  {
-    type: average
+    type: sum
     sql: ${new_store_count_in} ;;
   }
 
@@ -43,7 +45,7 @@ view: dcp_calculations_on_store_counts {
   }
 
   measure: stores_calc  {
-    type: average
+    type: sum
     value_format: "#,###"
     sql: ${stores_calc_in} ;;
   }
@@ -54,6 +56,11 @@ view: dcp_calculations_on_store_counts {
     sql: ${TABLE}.Total_Customer ;;
   }
 
+  measure: total_customer_count  {
+    type: count_distinct
+    sql: ${total_customer} ;;
+  }
+
   dimension: total_store_count_in {
     hidden: yes
     type: number
@@ -61,7 +68,7 @@ view: dcp_calculations_on_store_counts {
   }
 
   measure: total_store_count  {
-    type: average
+    type: sum
     sql: ${total_store_count_in} ;;
   }
 

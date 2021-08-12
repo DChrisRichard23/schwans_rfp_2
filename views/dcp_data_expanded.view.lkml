@@ -229,6 +229,11 @@ view: dcp_data_expanded {
     sql: ${TABLE}.Product_Short_Name ;;
   }
 
+  measure: product_short_name_count {
+    type: count_distinct
+    sql: ${product_short_name} ;;
+  }
+
   dimension: promoted_group {
     type: string
     sql: ${TABLE}.Promoted_Group ;;
