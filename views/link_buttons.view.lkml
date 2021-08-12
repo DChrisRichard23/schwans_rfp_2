@@ -2,15 +2,15 @@ view: link_buttons {
   derived_table: {
     sql: SELECT
           'Back to Contents Page' AS back_link
-      ,   '01. Create Example Report' AS link_1
-       ,  '02. Prompt For SKU #...' AS link_2
-       ,  '03. Select the IRI Records for the current period' AS link_3
-       ,  '04. Select the matching IRI Data records...' AS link_4
-       ,  '05. Get the Share of MULO value for each Total Customer' AS link_5
-       ,  '06. Find Matching DCP records...' AS link_6
-       ,  '07. Select From the Pizza Goal Sheet...' AS link_7
-       ,  '08. Get the Store Counts for each Total Customer...' AS link_8
-       ,  '09. DCP Calculation on Store Counts...' AS link_9
+      ,   '01. Task 9 - Create Example Report' AS link_1
+       ,  '02. Task 10 - Prompt For SKU #...' AS link_2
+       ,  '03. Task 11 - Select the IRI Records for the current period' AS link_3
+       ,  '04. Task 12 - Select the matching IRI Data records...' AS link_4
+       ,  '05. Task 13 - Get the Share of MULO value for each Total Customer' AS link_5
+       ,  '06. Task 14 - Find Matching DCP records...' AS link_6
+       ,  '07. Task 15 - Select From the Pizza Goal Sheet...' AS link_7
+       ,  '08. Task 16 - Get the Store Counts for each Total Customer...' AS link_8
+       ,  '09. Task 17 - DCP Calculation on Store Counts...' AS link_9
        ,  '10. Looker Demo...' AS link_10
        ;;
   }
